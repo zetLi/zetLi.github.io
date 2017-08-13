@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="常用命令Help        查看帮助show dbs   显示数据库列表use dbname  创建数据库　　如果数据库不存在，则创建数据库dbname，否则切换到指定数据库dbname。创建的数据库并不在数据库的列表中，要显示它，我们需要向数据dbname插入一些数据　　MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。　　显示数据库中的">
+<meta name="description" content="常用命令Help        查看帮助show dbs   显示数据库列表use dbname  创建数据库　　如果数据库不存在，则创建数据库dbname，否则切换到指定数据库dbname。创建的数据库并不在数据库的列表中，要显示它，我们需要向数据dbname插入一些数据　　MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。　　显示数据库中">
 <meta name="keywords" content="MongoDB 基础命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MongoDB基础使用">
 <meta property="og:url" content="http://yoursite.com/2017/07/18/MongoDB基础使用/index.html">
 <meta property="og:site_name" content="zetLi">
-<meta property="og:description" content="常用命令Help        查看帮助show dbs   显示数据库列表use dbname  创建数据库　　如果数据库不存在，则创建数据库dbname，否则切换到指定数据库dbname。创建的数据库并不在数据库的列表中，要显示它，我们需要向数据dbname插入一些数据　　MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。　　显示数据库中的">
-<meta property="og:updated_time" content="2017-07-18T13:23:45.958Z">
+<meta property="og:description" content="常用命令Help        查看帮助show dbs   显示数据库列表use dbname  创建数据库　　如果数据库不存在，则创建数据库dbname，否则切换到指定数据库dbname。创建的数据库并不在数据库的列表中，要显示它，我们需要向数据dbname插入一些数据　　MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。　　显示数据库中">
+<meta property="og:updated_time" content="2017-07-18T13:31:42.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB基础使用">
-<meta name="twitter:description" content="常用命令Help        查看帮助show dbs   显示数据库列表use dbname  创建数据库　　如果数据库不存在，则创建数据库dbname，否则切换到指定数据库dbname。创建的数据库并不在数据库的列表中，要显示它，我们需要向数据dbname插入一些数据　　MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。　　显示数据库中的">
+<meta name="twitter:description" content="常用命令Help        查看帮助show dbs   显示数据库列表use dbname  创建数据库　　如果数据库不存在，则创建数据库dbname，否则切换到指定数据库dbname。创建的数据库并不在数据库的列表中，要显示它，我们需要向数据dbname插入一些数据　　MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。　　显示数据库中">
 
 
 
@@ -111,7 +111,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     motion: true,
@@ -320,7 +320,8 @@
       
 
       
-        <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><p>Help        查看帮助<br>show dbs   显示数据库列表<br>use dbname  创建数据库<br>　　如果数据库不存在，则创建数据库dbname，否则切换到指定数据库dbname。创建的数据库并不在数据库的列表中，要显示它，我们需要向数据dbname插入一些数据<br>　　MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。<br>　　显示数据库中的集合 show collections </p>
+        <a id="more"></a>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><p>Help        查看帮助<br>show dbs   显示数据库列表<br>use dbname  创建数据库<br>　　如果数据库不存在，则创建数据库dbname，否则切换到指定数据库dbname。创建的数据库并不在数据库的列表中，要显示它，我们需要向数据dbname插入一些数据<br>　　MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。<br>　　显示数据库中的集合 show collections </p>
 <h2 id="1-增加数据"><a href="#1-增加数据" class="headerlink" title="1.增加数据"></a>1.增加数据</h2><p>db.web.save({“name”:”老李”})　　创建了名为web的集合，并新增了一条{“name”:”老李”} 的数据<br>db.web.insert({“name”:”ghost”, “age”:10})　　在web集合中插入一条新数据，如果没有web这个集合，mongodb会自动创建<br>　　save()和insert()也存在着些许区别：若新增的数据主键已经存在，insert()会不做操作并提示错误，而save() 则更改原来的内容为新内容。<br>　　_id是主键，主键是每条数据的唯一标识，不能重复，就像身份证是每个人唯一的编号一样。<br>　　存在数据：<code>{ _id : ObjectId(&quot;57e8d34b4764fb71d0a89caa&quot;), &quot; name &quot; : &quot; 老李&quot;}</code>　　_id是主键<br>　　<code>insert({ _id : ObjectId(&quot;57e8d34b4764fb71d0a89caa&quot;), &quot; name &quot; : &quot; 老王 &quot; })</code>　　会提示错误<br>　　<code>save(ObjectId(&quot;57e8d34b4764fb71d0a89caa&quot;), &quot; name &quot; : &quot; 老王 &quot; })</code>　　会把 “老李” 改为 “ 老王” ，有update的作用。</p>
 <h2 id="2删除数据"><a href="#2删除数据" class="headerlink" title="2删除数据"></a>2删除数据</h2><p>(1)、删除文档<br>(2)、删除集合<br>(3)、删除数据库<br>•    <code>db.users.remove({})</code>　　删除users集合下所有数据<br>•    <code>db.users.remove({&quot;name&quot;: &quot;lecaf&quot;})</code>　　删除users集合下name=”lecaf”的数据<br>•    <code>db.users.drop()或db.runCommand({&quot;drop&quot;:&quot;users&quot;})</code>　　删除集合users<br>•    <code>db.runCommand({&quot;dropDatabase&quot;: 1})</code>　　删除当前数据库，注意 此处的1没加双引号。  </p>
 <h2 id="3-查找数据"><a href="#3-查找数据" class="headerlink" title="3.查找数据"></a>3.查找数据</h2><p>•    <code>db.users.find()</code>　　 查找users集合中所有数据<br>•    <code>db.users.findOne()</code>　　查找users集合中的第一条数据<br>•    <code>db.users.find().pretty()</code>　　格式化查询到的数据  </p>
@@ -534,7 +535,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -613,6 +614,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
